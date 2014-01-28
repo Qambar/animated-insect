@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+		    var insect = document.getElementById("insect");
+		    yellowFlower();
+		}
+	</script>
+</head>
+<body>
+	<div id="insect" class="insect"></div>
+
+	<button onClick="yellowFlower()"> Yellow Flower</button>
+	<button onClick="pinkFlower()"> Pink Flower</button>
+	<button onClick="whiteFlower()"> White Flower</button>
+
+	<audio id="insectSound" autoplay="autoplay" hidden="true">
+	   <source src="sounds/buzz.mp3" />
+	</audio>
+<!--
+	<div class="yellowFlower"></div>
+	<div class="whiteFlower"></div>
+	<div class="pinkFlower"></div> -->
+
+
+</body>
+</html>
