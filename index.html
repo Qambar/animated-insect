@@ -2,30 +2,57 @@
 <html>
 <head>
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
 	<script src="js/script.js"></script>
-	<script type="text/javascript">
-		window.onload = function() {
-		    var insect = document.getElementById("insect");
-		    yellowFlower();
-		}
-	</script>
+
+	<style type="text/css">
+	.flower {
+		cursor : pointer;
+	}
+	.yellow-flower {
+		left: 219px;
+		top: 20px;
+		width: 431px;
+		height: 410px;
+		position: absolute;
+	}
+	.pink-flower {
+		left: 368px;
+		top: 485px;
+		width: 496px;
+		height: 149px;
+		position: absolute;
+		z-index; 1;
+	}
+	.white-flower {
+		left: 0px;
+		top: 300px;
+		width: 253px;
+		height: 334px;
+		position: absolute;
+		z-index: 1;
+
+	}
+	</style>
 </head>
 <body>
 	<div id="insect" class="insect"></div>
 
-	<button onClick="yellowFlower()"> Yellow Flower</button>
-	<button onClick="pinkFlower()"> Pink Flower</button>
-	<button onClick="whiteFlower()"> White Flower</button>
+	<div class="yellow-flower flower" onClick="yellowFlower()">&nbsp;</div>
+	<div class="pink-flower flower" onClick="pinkFlower()"> &nbsp;</div>
+	<div class="white-flower flower" onClick="whiteFlower()"> &nbsp;</div>
 
 	<audio id="insectSound" autoplay="autoplay" hidden="true">
 	   <source src="sounds/buzz.mp3" />
 	</audio>
-<!--
-	<div class="yellowFlower"></div>
-	<div class="whiteFlower"></div>
-	<div class="pinkFlower"></div> -->
+
+	<script type="text/javascript">
+		var insect = null;
+
+		    insect = document.getElementById("insect");
+		    yellowFlower();
 
 
+	</script>
 </body>
 </html>
